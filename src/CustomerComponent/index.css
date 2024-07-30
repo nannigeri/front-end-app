@@ -19,6 +19,14 @@ ul {
     color:#121C4E;
 }
 
+.clicked-card {
+    border-style: solid;
+    border-color: #d0271d;
+    background-color: #e8e8e8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 .card {
     border-style: solid;
     border-color: #d0271d;

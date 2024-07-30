@@ -22,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <div><CustomerComponent data = {customers}
+      formObject = {formObject}
       handleRowClick = {handleRowClick}
       /></div>
       <div><UpdateComponent data = {customers}
