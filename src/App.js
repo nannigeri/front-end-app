@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import CustomerComponent from './CustomerComponent';
 import UpdateComponent from './UpdateComponent';
-import customers from './CustomerComponent/customers.json'
-import {useState} from 'react';
+
+import {useState, useEffect} from 'react';
+import  * as items from './memdb.js';
 
 function App() {
   let blank = {"id": -1, "name": "", "email": "", "password": ""};
@@ -20,6 +21,11 @@ function App() {
     }
     
 }
+useEffect(() => {getCustomers()}, [formObject] )
+
+const getCustomers = function () {
+     setCustomer(items.getAll);
+}
 
   function onCancelClick(){
     setFormObject(blank);
@@ -31,11 +37,11 @@ function App() {
   
   return (
     <div className="App">
-      <div><CustomerComponent data = {customers}
+      <div><CustomerComponent data = {customer}
       formObject = {formObject}
       handleRowClick = {handleRowClick}
       /></div>
-      <div><UpdateComponent data = {customers}
+      <div><UpdateComponent data = {customer}
       formObject = {formObject}
       handleFillForm = {handleFillForm}
       onCancelClick = {onCancelClick}
