@@ -1,0 +1,32 @@
+.category {
+    font-weight: bold;
+    color:#121C4E;
+}
+
+.spacing {
+    padding: 5px;
+}
+
+.button-style {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #121C4E;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.button-cancel-style {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #d0271d;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

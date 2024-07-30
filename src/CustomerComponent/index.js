@@ -4,7 +4,7 @@ import customers from  "./customers.json";
 function CustomerComponent() {
     return (<div> 
         <div>
-        <div class= 'title-font'>Customers</div>
+        <div class= 'title-font'>Customer List</div>
         {customers.map(client => <div class="spacing"><div class='card side-by-side'>
             <div class = "spacing-side" >
                 <div class= "category"> 
