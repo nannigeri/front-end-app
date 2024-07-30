@@ -15,6 +15,23 @@
     border-radius: 5px;
 }
 
+.background-update {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.title-font {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    
+}
+
+.label-padding{
+    padding: 5px;
+}
+
 .button-cancel-style {
     padding: 10px;
     font-weight: bold;
@@ -29,4 +46,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.input-box-style {
+   border-radius: 5px;
+   padding: 5px; 
+   border-color: black;
+
 }

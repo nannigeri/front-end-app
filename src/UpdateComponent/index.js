@@ -1,30 +1,24 @@
 import './index.css'
 
-function UpdateComponent() {
-    const deleteAction = ()  => {
-        console.log('delete');
-    }
-    const cancelAction = ()  => {
-        console.log('cancel');
-    }
-    const saveAction = ()  => {
-        console.log('save');
-    }
+function UpdateComponent(props) {
+    
 
     return (<div>
+        <div class = "background-update">
+        <div class = "title-font">Update</div>
         <form>
-            <div>
+            <div class = "label-padding">
             <label class="category" for = "name">Name: </label>
-            <input class= "input-box-style" type= "text" id = "name" placeholder = "Name"></input>
+            <input value= {props.formObject.name} class= "input-box-style" type= "text" id = "name" placeholder = "Name"></input>
             </div>
-            <div>
+            <div class = "label-padding">
             <label class="category" for = "email">Email: </label>
-            <input class= "input-box-style" type= "text" id = "email" placeholder = "Email"></input>
+            <input value= {props.formObject.email} class= "input-box-style" type= "text" id = "email" placeholder = "Email"></input>
             </div>
             
-            <div>
+            <div class = "label-padding">
             <label class="category" for = "password">Password: </label>
-            <input class= "input-box-style" type= "text" id = "password" placeholder = "Password"></input>
+            <input value= {props.formObject.password} class= "input-box-style" type= "text" id = "password" placeholder = "Password"></input>
             </div>
 
             
@@ -32,23 +26,26 @@ function UpdateComponent() {
         </form>
 
         <div class = "side-by-side">
+            
             <div class = "spacing">
-            <button onClick = {deleteAction()} class = "button-style">
-                Delete
+            <button  class ="button-style">
+                Save
             </button>
             </div>
+
             <div class = "spacing">
-            <button onclick = {saveAction()} class ="button-style">
-                Save
+            <button  class = "button-style">
+                Delete
             </button>
             </div>
             
             <div class = "spacing">
-            <button onClick = {cancelAction()} class = "button-cancel-style">
+            <button class = "button-cancel-style">
                Cancel
             </button>
             </div>
             
+        </div>
         </div>
     </div>);
 }

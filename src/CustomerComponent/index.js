@@ -1,11 +1,13 @@
 import "./index.css"
-import customers from  "./customers.json";
+import {useState} from 'react';
 
-function CustomerComponent() {
-    return (<div> 
+
+const CustomerComponent = (props) => {
+
+  return (<div> 
         <div>
         <div class= 'title-font'>Customer List</div>
-        {customers.map(client => <div class="spacing"><div class='card side-by-side'>
+        {props.data.map(client =><div key ={client.id} class="spacing" onClick = {() => props.handleRowClick(client)}><div class='card side-by-side'>
             <div class = "spacing-side" >
                 <div class= "category"> 
                Name
