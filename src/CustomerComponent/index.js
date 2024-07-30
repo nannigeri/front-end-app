@@ -7,7 +7,7 @@ const CustomerComponent = (props) => {
   return (<div> 
         <div>
         <div class= 'title-font'>Customer List</div>
-        {props.data.map(client =><div key ={client.id} class={(client.id === props.formObject.id)? "spacing clicked-card side-by-side": "spacing card side-by-side"} onClick = {() => props.handleRowClick(client)}><div>
+        {props.data.map(client =><div key ={client.id} class={(client.id === props.formObject.id)? "spacing side-by-side clicked-card": "spacing card side-by-side"} onClick = {() => props.handleRowClick(client)}><div>
             <div class = "spacing-side" >
                 <div class= "category"> 
                Name

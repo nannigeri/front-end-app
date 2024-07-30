@@ -12,8 +12,18 @@ function App() {
 
 
   function handleRowClick(client){
-    setFormObject(client);
+    if (formObject.id === client.id){
+      setFormObject(blank);
+    }
+    else {
+      setFormObject(client);
+    }
+    
 }
+
+  function onCancelClick(){
+    setFormObject(blank);
+  }
 
   function handleFillForm(client){
    
@@ -28,6 +38,7 @@ function App() {
       <div><UpdateComponent data = {customers}
       formObject = {formObject}
       handleFillForm = {handleFillForm}
+      onCancelClick = {onCancelClick}
      /></div>
     </div>
   );

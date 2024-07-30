@@ -40,7 +40,7 @@ function UpdateComponent(props) {
             </div>
             
             <div class = "spacing">
-            <button class = "button-cancel-style">
+            <button onClick = {props.onCancelClick} class = "button-cancel-style">
                Cancel
             </button>
             </div>
