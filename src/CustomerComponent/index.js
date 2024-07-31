@@ -7,11 +7,20 @@ const CustomerComponent = (props) => {
   return (<div> 
         <div>
         <div class= 'title-font'>Customer List</div>
-        {props.data.map(client =><div key ={client.id} class={(client.id === props.formObject.id)? "spacing side-by-side clicked-card": "spacing card side-by-side"} onClick = {() => props.handleRowClick(client)}><div>
+        
+        <div class = "card-spacing">
+
+        
+        
+        {props.data.map(client =><div key ={client.id} class={(client.id === props.formObject.id)? " clicked-card": "card "} onClick = {() => props.handleRowClick(client)}>
+            
+            <div class= "side-by-side spacing">
+            
             <div class = "spacing-side" >
                 <div class= "category"> 
                Name
-               </div> {client.name}
+               </div> 
+               {client.name}
                 </div>
             <div class = "spacing-side"><div class= "category"> 
                Email
@@ -21,6 +30,7 @@ const CustomerComponent = (props) => {
                </div> {client.password}</div>
             </div>
             </div>)}
+            </div>
         </div>
        
         
