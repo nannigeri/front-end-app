@@ -10,6 +10,7 @@ function App() {
   let blank = {"id": -1, "name": "", "email": "", "password": ""};
   const [customer, setCustomer] = useState([]);
   const [formObject, setFormObject] = useState(blank);
+  let mode = (formObject.id >= 0) ? "Update" : "Add"
 
 
   function handleRowClick(client){
@@ -50,8 +51,19 @@ const getCustomers = function () {
   }
 
   let onSaveClick = function() {
-
+    console.log("Are you he")
+    let postCallback =  () => {
+      setFormObject(blank)
+    }
+    if (mode === "Update"){
+      console.log("updte")
+      items.put(formObject.id, formObject)
+    }
+    else if (mode === "Add") {
+      items.post(formObject, postCallback)
+    }
   }
+
   
   return (
     <div className="App">
