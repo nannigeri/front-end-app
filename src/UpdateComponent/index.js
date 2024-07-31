@@ -7,13 +7,22 @@ function UpdateComponent(props) {
         
         <div class = "background-update">
         <div class = "title-font">Update</div>
-       
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" name="name" onChange={(e) => props.handleInputChange(e)} value={props.formObject.name} class="form-control" id="exampleFormControlInput1" placeholder="John Smith"></input>
-            <label for="exampleFormControlInput2" class="form-label">Email</label>
+            <div class = "spacing">
+            <label for="exampleFormControlInput1" class="category spacing">Name</label>
+            <input type="text" name="name" onChange={(e) => props.handleInputChange(e)} value={props.formObject.name} id="exampleFormControlInput1" placeholder="John Smith"></input>
+            </div>
+            
+            <div class = "spacing">
+            <label for="exampleFormControlInput2" class="category spacing">Email</label>
             <input type="email" name="email" onChange={(e) => props.handleInputChange(e)} value={props.formObject.email} class="form-control" id="exampleFormControlInput2" placeholder="name@example.com"></input>
-            <label for="exampleFormControlInput3" class="form-label">Pass</label>
+            </div>
+
+            <div class = "spacing">
+            <label for="exampleFormControlInput3" class="category spacing">Password</label>
             <input type="text" name="password" onChange={(e) => props.handleInputChange(e)} value={props.formObject.password} class="form-control" id="exampleFormControlInput3" placeholder="********"></input>
+            </div>
+            
+            
             
 
             
