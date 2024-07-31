@@ -31,8 +31,26 @@ const getCustomers = function () {
     setFormObject(blank);
   }
 
+
   function handleFillForm(client){
    
+  }
+  const handleInputChange = function (event){
+    const name = event.target.name;
+    const value = event.target.value;
+    let newFormObject = {...formObject};
+    newFormObject[name] = value;
+    setFormObject(newFormObject);
+  }
+
+  let onDeleteClick = function() {
+    if (formObject.id >= 0) {
+      items.deleteById(formObject.id)
+    }
+  }
+
+  let onSaveClick = function() {
+
   }
   
   return (
@@ -45,6 +63,9 @@ const getCustomers = function () {
       formObject = {formObject}
       handleFillForm = {handleFillForm}
       onCancelClick = {onCancelClick}
+      onDeleteClick = {onDeleteClick}
+      onSaveClick = {onSaveClick}
+      handleInputChange = {handleInputChange}
      /></div>
     </div>
   );

@@ -4,26 +4,22 @@ function UpdateComponent(props) {
     
 
     return (<div>
+        
         <div class = "background-update">
         <div class = "title-font">Update</div>
-        <form>
-            <div class = "label-padding">
-            <label class="category" for = "name">Name: </label>
-            <input value= {props.formObject.name} class= "input-box-style" type= "text" id = "name" placeholder = "Name"></input>
-            </div>
-            <div class = "label-padding">
-            <label class="category" for = "email">Email: </label>
-            <input value= {props.formObject.email} class= "input-box-style" type= "text" id = "email" placeholder = "Email"></input>
-            </div>
+       
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" name="name" onChange={(e) => props.handleInputChange(e)} value={props.formObject.name} class="form-control" id="exampleFormControlInput1" placeholder="John Smith"></input>
+            <label for="exampleFormControlInput2" class="form-label">Email</label>
+            <input value={props.formObject.email} type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com"></input>
+            <label for="exampleFormControlInput3" class="form-label">Pass</label>
+            <input value={props.formObject.pass} type="email" class="form-control" id="exampleFormControlInput3" placeholder="********"></input>
+
             
-            <div class = "label-padding">
-            <label class="category" for = "password">Password: </label>
-            <input value= {props.formObject.password} class= "input-box-style" type= "text" id = "password" placeholder = "Password"></input>
-            </div>
 
             
            
-        </form>
+       
 
         <div class = "side-by-side">
             
@@ -34,11 +30,11 @@ function UpdateComponent(props) {
             </div>
 
             <div class = "spacing">
-            <button  class = "button-style">
+            <button onClick = {props.onDeleteClick} class = "button-style">
                 Delete
             </button>
             </div>
-            
+    
             <div class = "spacing">
             <button onClick = {props.onCancelClick} class = "button-cancel-style">
                Cancel
