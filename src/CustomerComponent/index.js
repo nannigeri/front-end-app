@@ -8,7 +8,7 @@ const CustomerComponent = (props) => {
         <div>
             <div class='title-font'>Customer List</div>
 
-            <div class="card-spacing">
+            <div class="card-spacing scroll">
 
 
 
