@@ -47,6 +47,10 @@ const getCustomers = function () {
   let onDeleteClick = function() {
     if (formObject.id >= 0) {
       items.deleteById(formObject.id)
+      setFormObject(blank);
+    }
+    else {
+      setFormObject(blank);
     }
   }
 
@@ -58,9 +62,11 @@ const getCustomers = function () {
     if (mode === "Update"){
       console.log("updte")
       items.put(formObject.id, formObject)
+      setFormObject(blank);
     }
     else if (mode === "Add") {
       items.post(formObject, postCallback)
+      setFormObject(blank)
     }
   }
 
