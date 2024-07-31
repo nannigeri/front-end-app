@@ -6,7 +6,7 @@ function UpdateComponent(props) {
     return (<div>
         
         <div class = "background-update">
-        <div class = "title-font">Update</div>
+        <div class = "title-font">{(props.mode == "Update") ? "Update" : "Add"}</div>
             <div class = "spacing">
             <label for="exampleFormControlInput1" class="category spacing">Name</label>
             <input type="text" name="name" onChange={(e) => props.handleInputChange(e)} value={props.formObject.name} id="exampleFormControlInput1" placeholder="John Smith"></input>

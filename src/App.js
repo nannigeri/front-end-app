@@ -82,6 +82,7 @@ const getCustomers = function () {
       onDeleteClick = {onDeleteClick}
       onSaveClick = {onSaveClick}
       handleInputChange = {handleInputChange}
+      mode = {mode}
      /></div>
     </div>
   );
