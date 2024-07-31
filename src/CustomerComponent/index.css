@@ -57,3 +57,8 @@ ul {
     overflow-y: auto;
    
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}

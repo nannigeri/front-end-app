@@ -10,7 +10,7 @@ const CustomerComponent = (props) => {
 
             <div class="card-spacing scroll">
 
-                {props.data.map(client => <div key={client.id} class={(client.id === props.formObject.id) ? " clicked-card" : "card "} onClick={() => props.handleRowClick(client)}>
+                {props.data.map(client => <div key={client.id} class={(client.id === props.formObject.id) ? " clicked-card flex-container" : "card flex-container"} onClick={() => props.handleRowClick(client)}>
 
                     <div class="side-by-side spacing">
 
