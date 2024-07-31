@@ -56,16 +56,14 @@ const getCustomers = function () {
 
   let onSaveClick = function() {
     console.log("Are you he")
-    let postCallback =  () => {
-      setFormObject(blank)
-    }
+    
     if (mode === "Update"){
       console.log("updte")
       items.put(formObject.id, formObject)
       setFormObject(blank);
     }
     else if (mode === "Add") {
-      items.post(formObject, postCallback)
+      items.post(formObject)
       setFormObject(blank)
     }
   }
