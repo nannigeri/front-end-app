@@ -62,3 +62,7 @@ ul {
     display: flex;
     justify-content: space-evenly;
 }
+
+.bold-click{
+    font-weight: bold;
+}

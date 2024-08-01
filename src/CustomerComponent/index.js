@@ -14,16 +14,16 @@ const CustomerComponent = (props) => {
 
                     <div class="side-by-side spacing">
 
-                        <div class="spacing-side" >
+                    <div class={(client.id === props.formObject.id) ? "bold-click spacing-side" : "spacing-side"}>
                             <div class="category">
                                 Name
                             </div>
                             {client.name}
                         </div>
-                        <div class="spacing-side"><div class="category">
+                        <div class={(client.id === props.formObject.id) ? "bold-click spacing-side" : "spacing-side"}><div class="category">
                             Email
                         </div> {client.email}</div>
-                        <div class="spacing-side"><div class="category">
+                        <div class={(client.id === props.formObject.id) ? "bold-click spacing-side" : "spacing-side"}><div class="category">
                             Password
                         </div> {client.password}</div>
                     </div>
