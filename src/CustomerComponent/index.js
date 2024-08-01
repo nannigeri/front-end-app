@@ -6,7 +6,7 @@ const CustomerComponent = (props) => {
 
     return (<div>
         <div>
-            <div class='title-font'>Customer List</div>
+            <div class='title-font'>Customer List - Neha Annigeri</div>
 
             <div class="card-spacing scroll">
 
